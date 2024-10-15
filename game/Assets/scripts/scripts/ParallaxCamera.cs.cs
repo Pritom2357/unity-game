@@ -15,15 +15,15 @@ public class ParallaxCamera : MonoBehaviour
 
     void Update()
     {
-        if (transform.position.x != oldPosition)
-        {
-            if (onCameraTranslate != null)
-            {
-                float delta = oldPosition - transform.position.x;
-                onCameraTranslate(delta);
-            }
+        // if (transform.position.x != oldPosition)
+        // {
+        //     if (onCameraTranslate != null)
+        //     {
+        //         float delta = oldPosition - transform.position.x;
+        //         onCameraTranslate(delta);
+        //     }
 
-            oldPosition = transform.position.x;
-        }
+        //     oldPosition = transform.position.x;
+        // }
     }
 }
