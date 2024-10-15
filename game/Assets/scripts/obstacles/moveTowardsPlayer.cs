@@ -10,11 +10,13 @@ public class Obstacle : MonoBehaviour
     public float bounceTime = 2f;  
     private hitCounter hits;
     private ShieldDamageController shieldDamage;
+    private playerLevelController playerLevel;
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         hits = FindObjectOfType<hitCounter>();
+        playerLevel = FindObjectOfType<playerLevelController>();
         shieldDamage = FindObjectOfType<ShieldDamageController>();
     }
 
@@ -36,6 +38,12 @@ public class Obstacle : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Shield") && !isBouncing)
         {
+            // playerLevelController playerLevel = collision.gameObject.GetComponent<playerLevelController>();
+            
+            // if (playerLevel != null){
+            //     playerLevel.RegisterHit();
+            // }
+
             obstacleHeath health = GetComponent<obstacleHeath>();
 
             if (health != null && shieldDamage != null)
@@ -49,6 +57,7 @@ public class Obstacle : MonoBehaviour
             rb.velocity = bounceDirection * speed;
 
             hits.IncrementHit();
+            playerLevel.RegisterHit();
             StartCoroutine(ResumeChaseAfterDelay());
         }
     }

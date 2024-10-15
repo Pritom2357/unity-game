@@ -18,10 +18,10 @@ public class ShieldDamageController : MonoBehaviour
 
     private void Update()
     {
-        if (isRecovering)
-        {
-            RecoverDamage();
-        }
+        // if (isRecovering)
+        // {
+        //     RecoverDamage();
+        // }
         Debug.Log(currentDamage);
     }
 
@@ -36,6 +36,8 @@ public class ShieldDamageController : MonoBehaviour
         if (lastHitTime > 0 && currentTime - lastHitTime <= hitTimeThreshold)
         {
             DecreaseDamage();
+        }else{
+            currentDamage = Mathf.Min(baseDamage, currentDamage + 1);
         }
 
         lastHitTime = currentTime;
