@@ -11,6 +11,8 @@ public class Obstacle : MonoBehaviour
     private hitCounter hits;
     private ShieldDamageController shieldDamage;
     private playerLevelController playerLevel;
+    private PlayerVelocityController playerImpulse;
+    private Rigidbody2D playerRb;
 
     private void Awake()
     {
@@ -18,6 +20,8 @@ public class Obstacle : MonoBehaviour
         hits = FindObjectOfType<hitCounter>();
         playerLevel = FindObjectOfType<playerLevelController>();
         shieldDamage = FindObjectOfType<ShieldDamageController>();
+        playerImpulse = FindObjectOfType<PlayerVelocityController>();
+        playerRb = GameObject.FindGameObjectWithTag("Player").GetComponent<Rigidbody2D>();
     }
 
     private void Start()
@@ -38,23 +42,25 @@ public class Obstacle : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Shield") && !isBouncing)
         {
-            // playerLevelController playerLevel = collision.gameObject.GetComponent<playerLevelController>();
-            
-            // if (playerLevel != null){
-            //     playerLevel.RegisterHit();
-            // }
-
             obstacleHeath health = GetComponent<obstacleHeath>();
 
             if (health != null && shieldDamage != null)
             {
                 int damage = shieldDamage.GetCurrentDamage();
                 health.TakeDamage(damage);
-                shieldDamage.RegisterHit(); // Register the hit with the ShieldDamageController
+                shieldDamage.RegisterHit();
             }
 
             Vector2 bounceDirection = collision.contacts[0].normal;
             rb.velocity = bounceDirection * speed;
+            // playerRb.velocity = -bounceDirection * speed;
+
+            if (playerImpulse != null)
+            {
+                // float impulseStrength = 50f;
+                // Vector2 impulse = bounceDirection * impulseStrength;
+                playerImpulse.ApplyVelocity(bounceDirection);
+            }
 
             hits.IncrementHit();
             playerLevel.RegisterHit();

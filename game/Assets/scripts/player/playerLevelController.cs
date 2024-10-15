@@ -11,6 +11,9 @@ public class playerLevelController : MonoBehaviour
 
     private int currentHits = 0;
     private int currentLevel = 1;
+    public delegate void LevelUpAction(int newLevel);
+
+    public event LevelUpAction onLevelUp;
 
     private void Start(){
         levelSlider.maxValue = hitsToLevelUp;
@@ -25,7 +28,7 @@ public class playerLevelController : MonoBehaviour
         if(currentHits >= hitsToLevelUp){
             LevelUp();
         }
-        Debug.Log(currentHits);
+        // Debug.Log(currentHits);
     }
 
     private void LevelUp(){
@@ -37,6 +40,8 @@ public class playerLevelController : MonoBehaviour
         levelSlider.maxValue = hitsToLevelUp;
 
         UpdateLevelText();
+
+        onLevelUp?.Invoke(currentLevel);
     }
 
     private void UpdateLevelText(){
