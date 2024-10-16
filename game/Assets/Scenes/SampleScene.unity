@@ -622,6 +622,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: player
       objectReference: {fileID: 0}
+    - target: {fileID: 5880816512725852409, guid: 661526d29e532e34386e658d6b13c97a, type: 3}
+      propertyPath: m_Color.a
+      value: 0.68235296
+      objectReference: {fileID: 0}
     - target: {fileID: 7167282224708316171, guid: 661526d29e532e34386e658d6b13c97a, type: 3}
       propertyPath: m_LocalScale.x
       value: 3.1073003
