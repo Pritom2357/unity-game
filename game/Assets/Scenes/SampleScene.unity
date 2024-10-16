@@ -1509,6 +1509,7 @@ MonoBehaviour:
   - {fileID: 4131308033535046481, guid: bc6fdab2e1fe9944ab8af2231cf21e66, type: 3}
   - {fileID: 4939266378350999755, guid: 51a0abe0a6d855347afccf3ee5523d33, type: 3}
   - {fileID: 5620633369406865761, guid: b5fac74d64c48de4cb56b042549e009e, type: 3}
+  - {fileID: 1269593772217150817, guid: aee8f9351f511f245ba6270f7b30cd83, type: 3}
   spawnInterval: 4
   spawnRangeX: 15
   spawnRangeY: 15

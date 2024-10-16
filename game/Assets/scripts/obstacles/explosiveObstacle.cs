@@ -27,6 +27,6 @@ public class explosiveObstacle : MonoBehaviour
     private void triggerExplosion(){
         isExploding = true;
         anim.SetBool("isExploding", true);
-        Destroy(gameObject, 1f);
+        Destroy(gameObject, 0.3f);
     }
 }
