@@ -14,10 +14,10 @@ public class BlackholeScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // if (Input.GetKeyDown(KeyCode.B))
-        // {
-        //     gameObject.SetActive(true);
-        // }
+        if (Input.GetKeyDown(KeyCode.B))
+        {
+           Debug.Log("Blackhole activated");
+        }
         FollowMouse();
     }
 
