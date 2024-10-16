@@ -59,6 +59,8 @@ public class explosiveObstacle : MonoBehaviour
         rb.velocity = Vector2.zero;
         yield return new WaitForSeconds(explosionDelay);
         isExploding = true;
+        anim.SetBool("isExploding", true);
+        Destroy(gameObject, 0.5f); // Destroys the obstacle after playing the explosion animation
         
         if (player != null)
         {
@@ -74,7 +76,5 @@ public class explosiveObstacle : MonoBehaviour
             }
         }
 
-        anim.SetBool("isExploding", true);
-        Destroy(gameObject, 0.5f); // Destroys the obstacle after playing the explosion animation
     }
 }
