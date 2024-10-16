@@ -33,11 +33,11 @@ public class playerLevelController : MonoBehaviour
         // Debug.Log(currentHits);
     }
 
-    public void RegisterHitByObstacle()
+    public void RegisterHitByObstacle(int _damage)
     {
         if (currentHits > 0)
         {
-            currentHits -= pointsDecreaseOnHit;
+            currentHits -= _damage;
             levelSlider.value = currentHits;
         }
         else if (currentHits <= 0 && currentLevel > 1)

@@ -47,6 +47,20 @@ public class ShootingObstacle : MonoBehaviour
             {
                 Destroy(gameObject);
             }
+            LookAtPlayer();
+        }
+    }
+
+    private void LookAtPlayer()
+    {
+        // Get the direction to the player
+        Vector2 direction = player.position - transform.position;
+
+        // Determine if the obstacle should be flipped
+        if ((direction.x > 0 && transform.localScale.x < 0) || (direction.x < 0 && transform.localScale.x > 0))
+        {
+            // Flip the x scale while maintaining its absolute value
+            transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
         }
     }
     

@@ -6,9 +6,11 @@ public class Bullet : MonoBehaviour
     public float speed = 5f;
     private Rigidbody2D bulletRb;
     private BoxCollider2D boxCollider;
+    private playerLevelController playerLevel;
 
     private void Awake(){
         boxCollider = GetComponent<BoxCollider2D>();
+        playerLevel = FindObjectOfType<playerLevelController>();
     }
 
     private void Start(){
@@ -21,6 +23,11 @@ public class Bullet : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision){
         if(collision.gameObject.CompareTag("Shield")){
+            Destroy(gameObject);
+        }
+
+        if(collision.gameObject.CompareTag("Player")){
+            playerLevel.RegisterHitByObstacle(1);
             Destroy(gameObject);
         }
     }
