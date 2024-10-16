@@ -6,13 +6,18 @@ public class movement : MonoBehaviour
 {
     [SerializeField] private float speed;
     private Rigidbody2D rb;
+    private knockback kb;
 
     private void Awake(){
         rb=GetComponent<Rigidbody2D>();
+        kb=GetComponent<knockback>();
     }
 
-    private void FixedUpdate(){
-        Move();
+    private void Update(){
+        if(!kb.isBeingKnockBack){
+            Move();
+        }
+            
     }
 
     private void Move(){

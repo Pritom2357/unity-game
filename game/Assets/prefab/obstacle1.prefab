@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 4009739077210301169}
   - component: {fileID: 3726707832777409979}
   - component: {fileID: 6544329971880424513}
+  - component: {fileID: 7106637457184687462}
   m_Layer: 0
   m_Name: obstacle1
   m_TagString: Untagged
@@ -211,6 +212,46 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 8
   bounceTime: 2
+--- !u!114 &7106637457184687462
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3678252804106077853}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6af2ad696dca254ea96230f3a96ce28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  knockbackTime: 0.5
+  hitDirectionForce: 10
+  constForce: 5
+  inputForce: 7.5
+  knockbackCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 2
+      outSlope: 2
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1001 &8100916868651903104
 PrefabInstance:
   m_ObjectHideFlags: 0

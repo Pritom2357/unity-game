@@ -66,6 +66,14 @@ public class Obstacle : MonoBehaviour
             playerLevel.RegisterHit();
             StartCoroutine(ResumeChaseAfterDelay());
         }
+
+        if(collision.gameObject.CompareTag("Player")){
+            playerLevelController playerLevel = collision.gameObject.GetComponent<playerLevelController>();
+            if (playerLevel != null)
+            {
+                playerLevel.RegisterHitByObstacle();
+            }
+        }
     }
 
 
