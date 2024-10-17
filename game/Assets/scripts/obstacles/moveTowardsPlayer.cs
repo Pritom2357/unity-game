@@ -85,7 +85,7 @@ public class Obstacle : MonoBehaviour
                 }
 
                 hits.IncrementHit();
-                playerLevel.RegisterHit();
+                playerLevel.RegisterHit(1);
                 StartCoroutine(ResumeChaseAfterDelay());
             }
 

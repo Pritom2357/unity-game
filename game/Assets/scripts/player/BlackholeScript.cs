@@ -4,19 +4,22 @@ using UnityEngine;
 
 public class BlackholeScript : MonoBehaviour
 {
-    // Start is called before the first frame update
     [SerializeField] private float speed = 2.0f;
-    void Start()
+
+    // Reference to the playerLevelController
+    private playerLevelController levelController;
+
+    private void Start()
     {
-        
+        // Find the playerLevelController in the scene
+        levelController = FindObjectOfType<playerLevelController>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.B))
         {
-           Debug.Log("Blackhole activated");
+            Debug.Log("Blackhole activated");
         }
         FollowMouse();
     }
@@ -28,8 +31,17 @@ public class BlackholeScript : MonoBehaviour
             Debug.LogError("Collider2D other is null");
             return;
         }
+
         if (other.CompareTag("Enemy"))
         {
+            // Increase player's score when the blackhole hits an enemy
+            if (levelController != null)
+            {
+                levelController.RegisterHit(3); // Call the method to register a hit
+                Debug.Log("Hit an enemy! Score increased.");
+            }
+
+            // Destroy the enemy object
             Destroy(other.gameObject);
         }
     }
@@ -42,9 +54,6 @@ public class BlackholeScript : MonoBehaviour
 
         // Calculate direction towards the mouse pointer
         Vector3 direction = (mousePosition - transform.position).normalized;
-
-        // Set a low speed for the blackhole
-        // float speed = 2.0f;
 
         // Move the blackhole towards the mouse pointer
         if (Vector3.Distance(transform.position, mousePosition) > 0.05f)

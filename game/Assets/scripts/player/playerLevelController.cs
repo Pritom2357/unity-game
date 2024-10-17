@@ -6,9 +6,9 @@ public class playerLevelController : MonoBehaviour
 {
     public Slider levelSlider;
     public int hitsToLevelUp = 10;
-    private int previousLevelPoints=10;
+    private int previousLevelPoints=2;
     public TextMeshProUGUI levelText;
-    public int hardnessIncreaser = 5;
+    public int hardnessIncreaser = 1;
     public int pointsDecreaseOnHit = 1;
 
     private int currentHits = 0;
@@ -23,8 +23,8 @@ public class playerLevelController : MonoBehaviour
         UpdateLevelText();
     }
 
-    public void RegisterHit(){
-        currentHits++;
+    public void RegisterHit(int _points){
+        currentHits+=_points;
         levelSlider.value = currentHits;
 
         if(currentHits >= hitsToLevelUp){
@@ -77,6 +77,11 @@ public class playerLevelController : MonoBehaviour
 
         UpdateLevelText();
         onLevelUp?.Invoke(currentLevel);
+    }
+
+    public int GetPlayerLevel()
+    {
+        return currentLevel;
     }
 
     private void UpdateLevelText(){
