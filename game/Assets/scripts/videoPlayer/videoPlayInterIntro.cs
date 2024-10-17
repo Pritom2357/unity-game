@@ -7,7 +7,7 @@ using UnityEngine.Video;
 public class videoPlayInterIntro : MonoBehaviour
 {
     // Start is called before the first frame update
-    public VideoPlayer videoPlayer;
+    [SerializeField] private VideoPlayer videoPlayer;
     // public string mainMenuSceneName;
 
     void Start()
