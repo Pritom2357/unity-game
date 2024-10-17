@@ -15,6 +15,7 @@ public class ObstacleSpawner : MonoBehaviour
 
     private Transform playerTransform;
     private int spawnCount = 0; 
+    private bool canSpawn=true;
 
     private void Start()
     {
@@ -22,11 +23,21 @@ public class ObstacleSpawner : MonoBehaviour
         StartCoroutine(SpawnObstacles());
     }
 
+    public void StopSpawning(){
+        canSpawn=false;
+    }
+
+    public void ResumeSpawning(){
+        canSpawn=true;
+    }
+
     private IEnumerator SpawnObstacles()
     {
         while (true)
         {
-            SpawnRandomObstacle();
+            if(canSpawn)
+                SpawnRandomObstacle();
+            
             yield return new WaitForSeconds(spawnInterval);
         }
     }

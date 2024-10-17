@@ -26,6 +26,8 @@ public class spawnManager : MonoBehaviour
     private List<GameObject> spawnedEnemies = new List<GameObject>(); // List to keep track of spawned enemies
     public int maxEnemyCount = 10;
 
+    bool isSpawn = true;
+
     private void Start()
     {
         playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
@@ -44,12 +46,24 @@ public class spawnManager : MonoBehaviour
     {
         while (true)
         {
-            int enemyCount = GetActiveEnemyCount();
-            if(enemyCount < maxEnemyCount){ 
-                SpawnEnemyForCurrentLevel();
+            if(isSpawn){
+                int enemyCount = GetActiveEnemyCount();
+                if(enemyCount < maxEnemyCount){ 
+                    SpawnEnemyForCurrentLevel();
+                }
             }
             yield return new WaitForSeconds(spawnInterval);
         }
+    }
+
+    public void StopSpawning()
+    {
+        isSpawn = false;
+    }
+
+    public void ResumeSpawning()
+    {
+        isSpawn = true;
     }
 
     private void SpawnEnemyForCurrentLevel()

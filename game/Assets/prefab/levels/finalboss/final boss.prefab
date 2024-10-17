@@ -180,11 +180,11 @@ GameObject:
   - component: {fileID: 8394940729497808192}
   - component: {fileID: 578688250864981903}
   - component: {fileID: 2206165850686244953}
-  - component: {fileID: 3656854474844974002}
-  - component: {fileID: 5837768205711897529}
+  - component: {fileID: 1133248101131013730}
+  - component: {fileID: 6060662584662071691}
   m_Layer: 7
   m_Name: final boss
-  m_TagString: Enemy
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -289,7 +289,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.12597077, y: 0.2934482}
+  m_Offset: {x: 0.02397728, y: 0.38231143}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -300,9 +300,9 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.2519413, y: 1.5868964}
+  m_Size: {x: 1.0479544, y: 2.0963776}
   m_EdgeRadius: 0
---- !u!114 &3656854474844974002
+--- !u!114 &1133248101131013730
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -311,20 +311,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 2293197314892383688}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b6af2ad696dca254ea96230f3a96ce28, type: 3}
+  m_Script: {fileID: 11500000, guid: befd1b6fd16f46c4f98348fb04f0b3da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  knockbackTime: 0.2
-  hitDirectionForce: 10
-  constForce: 5
-  inputForce: 7.5
-  knockbackCurve:
-    serializedVersion: 2
-    m_Curve: []
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
---- !u!114 &5837768205711897529
+  followSpeed: 50
+  viewDistance: 200
+  shootingRange: 10
+  projectilePrefab: {fileID: 7483404005069717867, guid: 17ca02c9241a1b54cbbb6339cfd3a6c9, type: 3}
+  fireRate: 2
+--- !u!114 &6060662584662071691
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -333,17 +328,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 2293197314892383688}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f990635d905ba094dbd452582dedbf45, type: 3}
+  m_Script: {fileID: 11500000, guid: 963cebfb2ccd0c843a6e537a03bdfb88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHealth: 100
   slider: {fileID: 8738055654678832879}
-  speed: 5
-  shootDistance: 10
-  bulletPrefab: {fileID: 1841472454184403029, guid: ce533819d2c7c604795c0560b4598995, type: 3}
-  bulletParent: {fileID: 4773620741087610578}
-  fireRate: 1
-  health: 1000
-  healthDepletionRate: 0
 --- !u!1 &4773620741087610578
 GameObject:
   m_ObjectHideFlags: 0
@@ -369,7 +358,7 @@ Transform:
   m_GameObject: {fileID: 4773620741087610578}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.79, y: 0.45, z: 0}
+  m_LocalPosition: {x: 1, y: 0.45, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

@@ -8,11 +8,13 @@ public class BlackholeScript : MonoBehaviour
 
     // Reference to the playerLevelController
     private playerLevelController levelController;
+    private obstacleHeath health;
 
     private void Start()
     {
         // Find the playerLevelController in the scene
         levelController = FindObjectOfType<playerLevelController>();
+        health = FindObjectOfType<obstacleHeath>();
     }
 
     void Update()
@@ -43,8 +45,35 @@ public class BlackholeScript : MonoBehaviour
 
             // Destroy the enemy object
             Destroy(other.gameObject);
+        }else if(other.CompareTag("Boss")){
+            obstacleHeath bossHealth = other.GetComponent<obstacleHeath>();
+
+            if(health != null){
+                bossHealth.TakeDamage(10);
+                Debug.Log("Hit a boss!");
+                levelController.RegisterHit(3);
+            }
         }
     }
+
+    // private void OnTriggerStay2D(Collider2D other)
+    // {
+    //     if (other.CompareTag("Boss"))
+    //     {
+    //         obstacleHeath bossHealth = other.GetComponent<obstacleHeath>();
+
+    //         if (bossHealth != null)
+    //         {
+    //             bossHealth.TakeDamage(1); // Adjust damage rate as necessary
+    //             Debug.Log("Continuously damaging the boss.");
+
+    //             if (levelController != null)
+    //             {
+    //                 levelController.RegisterHit(1); // Increase player level/score incrementally
+    //             }
+    //         }
+    //     }
+    // }
 
     void FollowMouse()
     {

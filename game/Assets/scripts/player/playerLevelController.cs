@@ -37,7 +37,11 @@ public class playerLevelController : MonoBehaviour
     {
         if (currentHits > 0)
         {
-            currentHits -= _damage;
+            if(_damage>currentHits){
+                currentHits=0;
+            }else{
+                currentHits -= _damage;
+            }
             levelSlider.value = currentHits;
         }
         else if (currentHits <= 0 && currentLevel > 1)

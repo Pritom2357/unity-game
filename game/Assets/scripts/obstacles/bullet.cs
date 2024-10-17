@@ -21,12 +21,17 @@ public class Bullet : MonoBehaviour
         Destroy(gameObject, 3f);
     }
 
-    private void OnCollisionEnter2D(Collision2D collision){
-        if(collision.gameObject.CompareTag("Shield")){
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Shield"))
+        {
+            Debug.Log("Bullet hit the shield.");
             Destroy(gameObject);
         }
 
-        if(collision.gameObject.CompareTag("Player")){
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            Debug.Log("Bullet hit the player.");
             playerLevel.RegisterHitByObstacle(1);
             Destroy(gameObject);
         }

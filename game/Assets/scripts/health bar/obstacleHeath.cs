@@ -16,18 +16,17 @@ public class obstacleHeath : MonoBehaviour
 
     public void TakeDamage(int _damage)
     {
-        // Debug.Log("Take Damage called");
-        // Debug.Log("Current Health: "+ currentHealth);
         currentHealth -= _damage;
         currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
         UpdateHealthUI(currentHealth, maxHealth);
 
         if (currentHealth <= 0)
         {
-            // Debug.Log("Destroyed");
             Destroy(gameObject);
+            Debug.Log("Boss defeated!");
         }
-        // Debug.Log("Current Health: "+ currentHealth);
+
+        Debug.Log($"Current Health after clamping: {currentHealth}");
     }
 
     private void UpdateHealthUI(float currentHealth, float maxHealth)
