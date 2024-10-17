@@ -23,8 +23,8 @@ public class playerLevelController : MonoBehaviour
         UpdateLevelText();
     }
 
-    public void RegisterHit(){
-        currentHits++;
+    public void RegisterHit(int _points){
+        currentHits+=_points;
         levelSlider.value = currentHits;
 
         if(currentHits >= hitsToLevelUp){
@@ -77,6 +77,10 @@ public class playerLevelController : MonoBehaviour
 
         UpdateLevelText();
         onLevelUp?.Invoke(currentLevel);
+    }
+    public int GetPlayerLevel()
+    {
+        return currentLevel;
     }
 
     private void UpdateLevelText(){

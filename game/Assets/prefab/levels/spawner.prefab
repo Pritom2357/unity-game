@@ -1,0 +1,79 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7768809566575448133
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5306737134039304394}
+  - component: {fileID: 8586624459330340651}
+  m_Layer: 0
+  m_Name: spawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5306737134039304394
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7768809566575448133}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -5.28, y: -2.1, z: -0.14610541}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8586624459330340651
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7768809566575448133}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f455e47b4f5d42349accf401cf16343b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scenes:
+  - sceneName: scene 1
+    enemies:
+    - {fileID: 2665346646124854637, guid: 89081e07e4f4043409e5a1f22d66038f, type: 3}
+    - {fileID: 5052449762135271341, guid: deb6970521765424d839fb0d8e772884, type: 3}
+    - {fileID: 4186384247061017350, guid: dd16f9a7ac0fd9740918d82d8a0ea840, type: 3}
+  - sceneName: scene 2
+    enemies:
+    - {fileID: 1120881391224777083, guid: c13f343d600474e418b1d5950a399b6b, type: 3}
+    - {fileID: 8294642387203832410, guid: 7e9ebdc1b1fba1443aa902c4ba1ac088, type: 3}
+    - {fileID: 4186384247061017350, guid: dd16f9a7ac0fd9740918d82d8a0ea840, type: 3}
+  - sceneName: scene 3
+    enemies:
+    - {fileID: 8631314936567821488, guid: 1c89f6bebcdbed54595192b592f6cf00, type: 3}
+    - {fileID: 2202285960404848053, guid: e5d20c90905bdef45bb69d4d20b47574, type: 3}
+    - {fileID: 637055019140143848, guid: 6336ecd610fbf18428eb9fddd76f03c4, type: 3}
+  - sceneName: scene 4
+    enemies:
+    - {fileID: 3109468089840153072, guid: 440d49b3dbab6d8489e0bc93a22d5119, type: 3}
+    - {fileID: 1082091560493612177, guid: 6f8239b35c8fb9443b6ddd55924bb5a4, type: 3}
+    - {fileID: 4227130568705600807, guid: 1788b8d59e96c014087e503af50b62e2, type: 3}
+  - sceneName: scene 5
+    enemies:
+    - {fileID: 8294642387203832410, guid: 7e9ebdc1b1fba1443aa902c4ba1ac088, type: 3}
+    - {fileID: 994488941651138884, guid: 02db124b53427d94b96ceab0ef65d9f2, type: 3}
+    - {fileID: 8294642387203832410, guid: 7e9ebdc1b1fba1443aa902c4ba1ac088, type: 3}
+  spawnInterval: 4
+  minSpawnRadius: 15
+  maxSpawnRadius: 20
+  obstacleLifetime: 100
+  spawnsBeforeIncrease: 5
+  lifetimeIncreaseAmount: 2
+  maxEnemyCount: 10

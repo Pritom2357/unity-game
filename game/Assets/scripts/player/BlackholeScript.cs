@@ -7,9 +7,10 @@ public class BlackholeScript : MonoBehaviour
     // Start is called before the first frame update
     [SerializeField] private float speed = 2.0f;
     private Animator animator;
+    private playerLevelController levelController;
     void Start()
     {
-        
+        levelController = FindObjectOfType<playerLevelController>();
     }
 
     // Update is called once per frame
@@ -31,6 +32,13 @@ public class BlackholeScript : MonoBehaviour
         }
         if (other.CompareTag("Enemy"))
         {
+            // Increase player's score when the blackhole hits an enemy
+            if (levelController != null)
+            {
+                levelController.RegisterHit(3); // Call the method to register a hit
+                Debug.Log("Hit an enemy! Score increased.");
+            }
+
             Destroy(other.gameObject);
         }
     }
