@@ -1407,6 +1407,10 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 0.123196825
       objectReference: {fileID: 0}
+    - target: {fileID: 3102406611386505922, guid: 661526d29e532e34386e658d6b13c97a, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 1985938500}
     - target: {fileID: 3717733391928400208, guid: 661526d29e532e34386e658d6b13c97a, type: 3}
       propertyPath: m_Size.x
       value: 2.7245255
