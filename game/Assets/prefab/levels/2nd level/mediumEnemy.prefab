@@ -578,6 +578,18 @@ PrefabInstance:
       propertyPath: m_PresetInfoIsWorld
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2154590961726002875, guid: 3fa29771eb4a4d64e916f02dbe4c8eee, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2154590961726002875, guid: 3fa29771eb4a4d64e916f02dbe4c8eee, type: 3}
+      propertyPath: m_Color.g
+      value: 0.030163467
+      objectReference: {fileID: 0}
+    - target: {fileID: 2154590961726002875, guid: 3fa29771eb4a4d64e916f02dbe4c8eee, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2540734974677951393, guid: 3fa29771eb4a4d64e916f02dbe4c8eee, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -685,6 +697,18 @@ PrefabInstance:
     - target: {fileID: 7663273390763703962, guid: 3fa29771eb4a4d64e916f02dbe4c8eee, type: 3}
       propertyPath: m_Layer
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8948966668524581978, guid: 3fa29771eb4a4d64e916f02dbe4c8eee, type: 3}
+      propertyPath: m_Colors.m_NormalColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8948966668524581978, guid: 3fa29771eb4a4d64e916f02dbe4c8eee, type: 3}
+      propertyPath: m_Colors.m_NormalColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8948966668524581978, guid: 3fa29771eb4a4d64e916f02dbe4c8eee, type: 3}
+      propertyPath: m_Colors.m_NormalColor.r
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
