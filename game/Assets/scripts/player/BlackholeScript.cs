@@ -8,9 +8,11 @@ public class BlackholeScript : MonoBehaviour
     [SerializeField] private float speed = 2.0f;
     private Animator animator;
     private playerLevelController levelController;
+    private obstacleHeath health;
     void Start()
     {
         levelController = FindObjectOfType<playerLevelController>();
+        health = FindObjectOfType<obstacleHeath>();
     }
 
     // Update is called once per frame
@@ -40,6 +42,15 @@ public class BlackholeScript : MonoBehaviour
             }
 
             Destroy(other.gameObject);
+        }
+        else if(other.CompareTag("Boss")){
+            obstacleHeath bossHealth = other.GetComponent<obstacleHeath>();
+
+            if(health != null){
+                bossHealth.TakeDamage(10);
+                Debug.Log("Hit a boss!");
+                levelController.RegisterHit(3);
+            }
         }
     }
 
