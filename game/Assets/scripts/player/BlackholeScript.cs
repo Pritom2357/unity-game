@@ -6,6 +6,7 @@ public class BlackholeScript : MonoBehaviour
 {
     // Start is called before the first frame update
     [SerializeField] private float speed = 2.0f;
+    private Animator animator;
     void Start()
     {
         

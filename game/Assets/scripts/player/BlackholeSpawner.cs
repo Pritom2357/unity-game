@@ -8,11 +8,19 @@ public class BlackholeSpawner : MonoBehaviour
     [SerializeField] private GameObject blackholePrefab;
     [SerializeField] private GameObject shield;
     [SerializeField] private float blackholeLifetime = 5.0f;
+    [SerializeField] private Animator animator;
     private float timeCounter = 0.0f;
+    private Vector3 initialScale;
     void Awake()
     {
+        
         blackholePrefab.SetActive(false);
 
+    }
+    void Start()
+    {
+        initialScale = blackholePrefab.transform.localScale;
+        
     }
 
     // Update is called once per frame
@@ -23,17 +31,28 @@ public class BlackholeSpawner : MonoBehaviour
 
     private void blackholeTracker(){
         if(blackholePrefab.activeSelf){
-            if(blackholeLifetime < timeCounter){
+            if(blackholePrefab.transform.localScale.x == 0.0f && animator.GetBool("timeout")){
+                animator.SetBool("timeout", false);
                 blackholePrefab.SetActive(false);
+                blackholePrefab.transform.localScale = initialScale;
                 shield.SetActive(true);
                 timeCounter = 0.0f;
-            }else{
+            }
+            if(blackholeLifetime < timeCounter){
+                Debug.Log("timeout");
+                animator.SetBool("timeout", true);
+            }
+            else{
                 timeCounter += Time.deltaTime;
             }
+            
+            
+            
         }
-        if(Input.GetKeyDown(KeyCode.B)){
+        if(Input.GetKeyDown(KeyCode.B) && !blackholePrefab.activeSelf){
             
             blackholePrefab.SetActive(true);
+            animator.SetBool("timeout", false);
             blackholePrefab.transform.position = shield.transform.position;
             shieldDeactiavtor();
             timeCounter = 0.0f;
