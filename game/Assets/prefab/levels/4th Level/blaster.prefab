@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 4272449392834579678}
   - component: {fileID: 3185492749909909451}
   - component: {fileID: 4395853781203289403}
-  m_Layer: 7
+  m_Layer: 11
   m_Name: blaster
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -225,7 +225,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1894398132980320447}
   - component: {fileID: 3449213327188565951}
-  m_Layer: 7
+  m_Layer: 11
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -309,7 +309,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 110974921524704015, guid: 3fa29771eb4a4d64e916f02dbe4c8eee, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 1116579191961866337, guid: 3fa29771eb4a4d64e916f02dbe4c8eee, type: 3}
       propertyPath: m_PresetInfoIsWorld
@@ -409,15 +409,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5079522227189791431, guid: 3fa29771eb4a4d64e916f02dbe4c8eee, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 5308894826094007257, guid: 3fa29771eb4a4d64e916f02dbe4c8eee, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 6474718883627845294, guid: 3fa29771eb4a4d64e916f02dbe4c8eee, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 7663273390763703962, guid: 3fa29771eb4a4d64e916f02dbe4c8eee, type: 3}
       propertyPath: m_Name
@@ -425,7 +425,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7663273390763703962, guid: 3fa29771eb4a4d64e916f02dbe4c8eee, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 11
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 7454966184565710261, guid: 3fa29771eb4a4d64e916f02dbe4c8eee, type: 3}

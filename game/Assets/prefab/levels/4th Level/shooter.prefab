@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 1213165471369768647}
   - component: {fileID: 7131051265498877944}
   - component: {fileID: 3738947030194933166}
-  m_Layer: 7
+  m_Layer: 11
   m_Name: shooter
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -217,7 +217,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7998576337694853348}
   - component: {fileID: 4799196493527427247}
-  m_Layer: 7
+  m_Layer: 11
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -301,7 +301,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8087665171201858490}
   - component: {fileID: 2896267870088022787}
-  m_Layer: 7
+  m_Layer: 11
   m_Name: Wing Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -385,7 +385,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5530459831768231693}
   - component: {fileID: 4705632282508308204}
-  m_Layer: 7
+  m_Layer: 11
   m_Name: Wing Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -469,7 +469,7 @@ GameObject:
   m_Component:
   - component: {fileID: 381984762248532004}
   - component: {fileID: 263834387331302565}
-  m_Layer: 7
+  m_Layer: 11
   m_Name: Mount
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -555,7 +555,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6937013558161753931}
-  m_Layer: 7
+  m_Layer: 11
   m_Name: shooterParent
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -587,7 +587,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 110974921524704015, guid: 3fa29771eb4a4d64e916f02dbe4c8eee, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 2540734974677951393, guid: 3fa29771eb4a4d64e916f02dbe4c8eee, type: 3}
       propertyPath: m_AnchorMax.y
@@ -675,15 +675,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5079522227189791431, guid: 3fa29771eb4a4d64e916f02dbe4c8eee, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 5308894826094007257, guid: 3fa29771eb4a4d64e916f02dbe4c8eee, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 6474718883627845294, guid: 3fa29771eb4a4d64e916f02dbe4c8eee, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 7663273390763703962, guid: 3fa29771eb4a4d64e916f02dbe4c8eee, type: 3}
       propertyPath: m_Name
@@ -691,7 +691,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7663273390763703962, guid: 3fa29771eb4a4d64e916f02dbe4c8eee, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 11
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 7454966184565710261, guid: 3fa29771eb4a4d64e916f02dbe4c8eee, type: 3}

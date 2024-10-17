@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5876712898558088176}
   - component: {fileID: 7914903235023904495}
-  m_Layer: 7
+  m_Layer: 11
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8432710243991895776}
   - component: {fileID: 8556648212192921402}
-  m_Layer: 7
+  m_Layer: 11
   m_Name: Wing Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -178,7 +178,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2406088989259854449}
   - component: {fileID: 7964870299507671751}
-  m_Layer: 7
+  m_Layer: 11
   m_Name: Wing Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -265,7 +265,7 @@ GameObject:
   - component: {fileID: 8949883256934906978}
   - component: {fileID: 1024709039989446669}
   - component: {fileID: 622194780877911681}
-  m_Layer: 7
+  m_Layer: 11
   m_Name: L2Boss
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -414,7 +414,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3192464976978585167}
-  m_Layer: 7
+  m_Layer: 11
   m_Name: bulletPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -446,7 +446,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 110974921524704015, guid: 3fa29771eb4a4d64e916f02dbe4c8eee, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 1116579191961866337, guid: 3fa29771eb4a4d64e916f02dbe4c8eee, type: 3}
       propertyPath: m_PresetInfoIsWorld
@@ -550,11 +550,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5079522227189791431, guid: 3fa29771eb4a4d64e916f02dbe4c8eee, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 6474718883627845294, guid: 3fa29771eb4a4d64e916f02dbe4c8eee, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 7663273390763703962, guid: 3fa29771eb4a4d64e916f02dbe4c8eee, type: 3}
       propertyPath: m_Name
@@ -562,7 +562,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7663273390763703962, guid: 3fa29771eb4a4d64e916f02dbe4c8eee, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:

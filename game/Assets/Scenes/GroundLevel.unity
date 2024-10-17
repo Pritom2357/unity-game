@@ -265,7 +265,7 @@ GameObject:
   - component: {fileID: 519420030}
   - component: {fileID: 519420033}
   - component: {fileID: 519420034}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -730,7 +730,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1269203769}
   - component: {fileID: 1269203770}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: cm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1057,9 +1057,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: final boss
       objectReference: {fileID: 0}
+    - target: {fileID: 2293197314892383688, guid: a17cc6bdbb2a32d409849d8516bc1fe2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2751789981748523284, guid: a17cc6bdbb2a32d409849d8516bc1fe2, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1133248101131013730, guid: a17cc6bdbb2a32d409849d8516bc1fe2, type: 3}
@@ -1115,6 +1119,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitCounterText: {fileID: 1114687529}
+--- !u!114 &1718586973
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 558813218}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbcbdb20284b08a4384e993fa2fc2732, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1849533874
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1740,6 +1756,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 958890447573962214, guid: 661526d29e532e34386e658d6b13c97a, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1718586970}
+    - targetCorrespondingSourceObject: {fileID: 958890447573962214, guid: 661526d29e532e34386e658d6b13c97a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1718586973}
     - targetCorrespondingSourceObject: {fileID: 912728935470792500, guid: 661526d29e532e34386e658d6b13c97a, type: 3}
       insertIndex: -1
       addedObject: {fileID: 50380303}

@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 941666322235515696}
   - component: {fileID: 8500591178367512123}
-  m_Layer: 7
+  m_Layer: 11
   m_Name: Leg Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -98,7 +98,7 @@ GameObject:
   - component: {fileID: 6816370194192207682}
   - component: {fileID: 3677109002858555713}
   - component: {fileID: 7796083967956611874}
-  m_Layer: 7
+  m_Layer: 11
   m_Name: final boss
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -270,7 +270,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4603422397800050501}
   - component: {fileID: 6427450958042577953}
-  m_Layer: 7
+  m_Layer: 11
   m_Name: Leg Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -354,7 +354,7 @@ GameObject:
   m_Component:
   - component: {fileID: 442360820971639371}
   - component: {fileID: 1461381505947234430}
-  m_Layer: 7
+  m_Layer: 11
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -437,7 +437,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8882378433434320570}
-  m_Layer: 7
+  m_Layer: 11
   m_Name: bulletPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -467,6 +467,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1680950850378735191}
     m_Modifications:
+    - target: {fileID: 110974921524704015, guid: 3fa29771eb4a4d64e916f02dbe4c8eee, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 1116579191961866337, guid: 3fa29771eb4a4d64e916f02dbe4c8eee, type: 3}
       propertyPath: m_PresetInfoIsWorld
       value: 1
@@ -567,6 +571,14 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 301.99997
       objectReference: {fileID: 0}
+    - target: {fileID: 5079522227189791431, guid: 3fa29771eb4a4d64e916f02dbe4c8eee, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 5308894826094007257, guid: 3fa29771eb4a4d64e916f02dbe4c8eee, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 5770451342986573837, guid: 3fa29771eb4a4d64e916f02dbe4c8eee, type: 3}
       propertyPath: m_LocalScale.x
       value: 2.55
@@ -575,9 +587,17 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 302
       objectReference: {fileID: 0}
+    - target: {fileID: 6474718883627845294, guid: 3fa29771eb4a4d64e916f02dbe4c8eee, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 7663273390763703962, guid: 3fa29771eb4a4d64e916f02dbe4c8eee, type: 3}
       propertyPath: m_Name
       value: Canvas 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7663273390763703962, guid: 3fa29771eb4a4d64e916f02dbe4c8eee, type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
