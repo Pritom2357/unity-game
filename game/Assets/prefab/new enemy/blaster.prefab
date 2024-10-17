@@ -158,7 +158,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explosionRadius: 5
   explosionDelay: 2
-  explosionForce: 100
+  explosionForce: 500
   damage: 5
   damageRadius: 10
 --- !u!114 &927637431529944152
